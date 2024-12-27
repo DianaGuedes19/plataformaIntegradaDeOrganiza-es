@@ -1,14 +1,15 @@
 @startuml
 class Organization {
     - name: String
-    - departments: List<Department>
-    - projects: List<Project>
+
+
+
 }
 
 class Department {
     - name: String
     - director: Employee
-    - employees: List<Employee>
+
 }
 
 class Employee {
@@ -23,7 +24,7 @@ class Project {
     - description: String
     - budget: double
     - manager: Employee
-    - tasks: List<Task>
+
 }
 
 class Task {
@@ -41,6 +42,7 @@ class Inventory {
 
 Organization "1" -- "many" Department
 Organization "1" -- "many" Project
+Organization "1" -- "many" Inventory
 Department "1" -- "many" Employee
 Project "1" -- "many" Task
 Task "1" -- "1" Employee
