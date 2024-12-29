@@ -17,8 +17,8 @@ public class Task {
         _employee = employee;
     }
 
-    // Mudar o employee da tarefa
-    public boolean assignTask (Employee TaskEmployee){
+    // Mudar o employee responsável da tarefa
+    public boolean changeEmployeeTask (Employee TaskEmployee){
     if (TaskEmployee!=null){
         _employee=TaskEmployee;
         return true;
@@ -31,14 +31,11 @@ public class Task {
     _status = Newstatus;
     }
 
-    // Listar Tarefas
+    // Listar Tarefas e Projeto
     @Override
     public String toString() {
         return "Task{" +
-                "_name='" + _name + '\'' +
-                ", _status='" + _status + '\'' +
-                ", _project=" + _project +
-                ", _employee=" + _employee +
+                "_project=" + _project +
                 '}';
     }
 }
