@@ -22,8 +22,7 @@ Atribuir Tarefas: Associar tarefas a funcionários específicos.
 Criar Projeto: Registar novos projetos com nome, descrição, orçamento e um gestor responsável.
 Adicionar Tarefas ao Projeto: Criar tarefas e associá-las a um projeto.
 Atualizar Status do Projeto: Modificar o estado do projeto (Em andamento, Concluído, Cancelado).
-Visualizar Projetos: Listar todos os projetos com suas tarefas e gestores responsáveis.
-Atribuir Funcionários a Projetos: Associar colaboradores como membros de projeto.
+Visualizar Projetos: Listar todos os projetos com suas tarefas.
 
 5. Gestão de Tarefas
 Criar Tarefa: Definir tarefas com nome, estado (Pendente, Em Progresso, Concluído) e atribuí-las a um funcionário e projeto.
