@@ -13,7 +13,10 @@ public class Task {
         if (status == null || status.isBlank()){throw new IllegalArgumentException("Insert a valid status");}
         _status=status;
 
+        if (project == null){throw new IllegalArgumentException("Insert a valid project");}
         _project=project;
+
+        if (employee == null){throw new IllegalArgumentException("Insert a valid employee");}
         _employee = employee;
     }
 
@@ -27,7 +30,7 @@ public class Task {
     }
 
     //Mudar o Status
-    public void changeStatus (String Newstatus){
+    protected void changeStatus (String Newstatus){
     _status = Newstatus;
     }
 

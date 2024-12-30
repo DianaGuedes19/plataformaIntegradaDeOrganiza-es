@@ -25,7 +25,7 @@ public class Inventory {
     }
 
     //Aumentar ou diminuir a quantidade
-    public void changeQuantity (int quantity){
+    protected void changeQuantity (int quantity){
         if (quantity<0){
             _quantity=quantity;
         }
@@ -35,7 +35,8 @@ public class Inventory {
     //Eliminar itens que não estão mais disponíveis
     public boolean removeItem (Inventory inventory){
         if (inventory._quantity <= 0){
-            return _listaDeItens.remove(inventory);
+            _listaDeItens.remove(inventory);
+            return true;
         }
         return false;
     }

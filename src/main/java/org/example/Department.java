@@ -12,8 +12,13 @@ public class Department {
     private List<Employee> employeeList;
 
     public Department (String name, Employee diretor, Organization organization){
+        if(name == null || name.isBlank()) { throw new IllegalArgumentException("Insert a valid name"); }
         _name=name;
+
+        if(diretor == null) { throw new IllegalArgumentException("Insert valid Director"); }
         _director=diretor;
+
+        if(organization == null) { throw new IllegalArgumentException("Insert valid Organization"); }
         _organization = organization;
     }
 
@@ -29,7 +34,7 @@ public class Department {
 
     // Adicionar empregado ao Departamento
     public void addEmployee (Employee employee){
-        if (employee.isInDepartment(this)){
+        if (employee!=null && employee.isInDepartment(this)){
         employeeList.add(employee);}
     }
 

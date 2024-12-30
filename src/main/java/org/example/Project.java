@@ -14,10 +14,19 @@ public class Project {
     private List <Task> tasklist;
 
     public Project(String name, String description, double budget, String status, Organization organization){
+        if (name == null || name.isBlank()){throw new IllegalArgumentException("Insert a valid name");}
         _name=name;
+
+        if (description == null || description.isBlank()){throw new IllegalArgumentException("Insert a valid Description");}
         _description=description;
+
+        if (budget < 0 ){throw new IllegalArgumentException("Insert a valid Budget");}
         _budget=budget;
+
+        if (status == null || status.isBlank()){throw new IllegalArgumentException("Insert a valid Status");}
         _status=status;
+
+        if (organization == null ){throw new IllegalArgumentException("Insert a valid Organization");}
         _organization=organization;
     }
 
@@ -33,7 +42,7 @@ public class Project {
     }
 
     //Atualizar status
-    public boolean changeStatus (String status){
+    protected boolean changeStatus (String status){
         if (status==null || status.isBlank()){
             return false;
         }

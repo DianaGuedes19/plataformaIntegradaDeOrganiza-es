@@ -22,12 +22,34 @@ public class Employee {
         if (salary<0) {throw new IllegalArgumentException("Insert a valid salary");}
         _salary=salary;
 
+        if (task == null){throw new IllegalArgumentException("Insert a valid Task");}
         _task=task;
+
+        if (department == null){throw new IllegalArgumentException("Insert a valid Department");}
         _department=department;
     }
 
-    public void adicionarFuncionário ( Employee employee){
-        listaDeEmployee.add(employee);
+    // Alterar posição do funcionário
+    protected void change_position(String _position) {
+        this._position = _position;
+    }
+
+    // Alterar salário do funcionário
+    protected void change_salary(double _salary) {
+        this._salary = _salary;
+    }
+
+    // Alterar tarefa do funcionário
+    protected void change_task(Task _task) {
+        this._task = _task;
+    }
+
+    // Adicionar um funcionário
+    public boolean adicionarFuncionário ( Employee employee){
+        if (employee!=null){
+       listaDeEmployee.add(employee);
+        return true; }
+        return false;
     }
 
     // Está no departamento?
@@ -35,4 +57,11 @@ public class Employee {
         return Department == _department;
     }
 
+    //Listar todos os funcionário da organização
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "listaDeEmployee=" + listaDeEmployee +
+                '}';
+    }
 }

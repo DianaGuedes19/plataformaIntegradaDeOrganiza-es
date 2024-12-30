@@ -3,7 +3,7 @@
 1. Gestão de Organização
 Criar Organização: Permitir a criação de uma nova organização.
 Adicionar Departamentos: Associar departamentos a uma organização.
-Listar Informações: Mostrar detalhes da organização, incluindo departamentos, projetos, inventário e colaboradores.
+Listar Informações: Mostrar detalhes da organização, incluindo departamentos, projetos, inventário.
 
 2. Gestão de Departamentos
 Adicionar Departamentos: Criar novos departamentos com um diretor e uma lista de colaboradores.
@@ -36,8 +36,3 @@ Atualizar Quantidade de um Item: Aumentar ou reduzir a quantidade de um item.
 Listar Inventário: Mostrar todos os itens armazenados, com quantidades e localizações.
 Remover Itens: Eliminar itens que não estão mais disponíveis.
 
-7. Relatórios e Visualizações
-Relatório de Funcionários por Departamento: Gerar uma lista de funcionários alocados em cada departamento.
-Relatório de Projetos: Exibir o progresso e orçamento de todos os projetos da organização.
-Relatório de Tarefas Pendentes: Mostrar tarefas que ainda não foram concluídas.
-Resumo do Inventário: Exibir um resumo de todos os itens disponíveis no inventário.
