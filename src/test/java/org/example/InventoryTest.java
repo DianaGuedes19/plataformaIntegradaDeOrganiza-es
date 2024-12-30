@@ -105,4 +105,54 @@ public class InventoryTest {
         //Assert
         assertTrue(inventory1._listaDeItens.contains(inventory1), "The item was added to list.");}
 
-}
+    @Test
+    public void changeElementToInvetory() throws Exception{
+        //arrange
+        Organization organization1 = new Organization("ISEP");
+
+        Inventory inventory1= new Inventory("Cadeira1",2,"Porto",organization1);
+
+        // act
+        inventory1.changeQuantity(4);
+
+        //Assert
+        assertEquals(4,inventory1.get_quantity());
+    }
+
+    @Test
+    public void removeElementToInvetory() throws Exception{
+        //arrange
+        Organization organization1 = new Organization("ISEP");
+        Inventory inventory1= new Inventory("Cadeira1",2,"Porto",organization1);
+        inventory1._listaDeItens = new ArrayList<>();
+
+
+        // act
+        inventory1._listaDeItens.add(inventory1);
+        inventory1.changeQuantity(-1);
+        Boolean result = inventory1.removeItem(inventory1);
+
+        //Assert
+        assertTrue(result);
+    }
+
+    @Test
+    public void DontremoveElementOfInvetory() throws Exception{
+        //arrange
+        Organization organization1 = new Organization("ISEP");
+        Inventory inventory1= new Inventory("Cadeira1",2,"Porto",organization1);
+        inventory1._listaDeItens = new ArrayList<>();
+
+
+        // act
+        inventory1._listaDeItens.add(inventory1);
+        inventory1.changeQuantity(10);
+        Boolean result = inventory1.removeItem(inventory1);
+
+        //Assert
+        assertFalse(result);
+    }
+    }
+
+
+

@@ -30,16 +30,19 @@ public class Inventory {
 
     // Adicionar itens à lista
     public void adicionarItem (Inventory inventory){
+
         _listaDeItens.add(inventory);
     }
 
     //Aumentar ou diminuir a quantidade
     protected void changeQuantity (int quantity){
-        if (quantity<0){
             _quantity=quantity;
-        }
+
     }
 
+    protected int get_quantity() {
+        return _quantity;
+    }
 
     //Eliminar itens que não estão mais disponíveis
     public boolean removeItem (Inventory inventory){

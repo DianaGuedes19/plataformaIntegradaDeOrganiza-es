@@ -124,7 +124,6 @@ public class EmployeeTest {
 
         // act
         Boolean result = employee1.change_position("Civil");
-
         //Assert
         assertTrue(result);
     }
