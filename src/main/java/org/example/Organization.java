@@ -5,9 +5,9 @@ import java.util.List;
 public class Organization {
     private String _name;
 
-    private List<Inventory> Inventory;
-    private List <Project> Project;
-    private List <Department> ListGfDepartments;
+    protected List<Inventory> Inventory;
+    protected List <Project> Project;
+    protected List <Department> ListOfDepartments;
 
     public Organization(String name) throws Exception{
         if(name == null || name.isBlank()) { throw new IllegalArgumentException("Insert a valid name"); }
@@ -15,21 +15,12 @@ public class Organization {
     }
 
 
-    // Mostrar detalhes da organização
-    @Override
-    public String toString() {
-        return "Organization{" +
-                "_name='" + _name + '\'' +
-                ", Inventory=" + Inventory +
-                ", Project=" + Project +
-                ", ListGfDepartments=" + ListGfDepartments +
-                '}';
-    }
-
-    // Adicionar depaertamentos
-    public void adicionarDepartamentos (Department department){
+    // Adicionar departamentos
+    public boolean adicionarDepartamentos (Department department){
         if(department!=null){
-            ListGfDepartments.add(department);
+            ListOfDepartments.add(department);
+            return true;
         }
+        return false;
     }
 }

@@ -29,6 +29,19 @@ public class Employee {
         _department=department;
     }
 
+    // Employee sem departamento e Task para resolver problema de dependências
+    public Employee (String name, String position, double salary){
+        if (name == null || name.isBlank()){throw new IllegalArgumentException("Insert a valid name");}
+        _name=name;
+
+        if (position == null || position.isBlank()){throw new IllegalArgumentException("Insert a valid position");}
+        _position=position;
+
+        if (salary<0) {throw new IllegalArgumentException("Insert a valid salary");}
+        _salary=salary;
+
+    }
+
     // Alterar posição do funcionário
     protected void change_position(String _position) {
         this._position = _position;
