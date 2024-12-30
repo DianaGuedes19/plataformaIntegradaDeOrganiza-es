@@ -9,7 +9,7 @@ public class Department {
     private Organization _organization;
 
 
-    private List<Employee> employeeList;
+    protected List<Employee> employeeList;
 
     public Department (String name, Employee diretor, Organization organization){
         if(name == null || name.isBlank()) { throw new IllegalArgumentException("Insert a valid name"); }
@@ -20,6 +20,12 @@ public class Department {
 
         if(organization == null) { throw new IllegalArgumentException("Insert valid Organization"); }
         _organization = organization;
+    }
+
+
+    public Department (String name){
+        if(name == null || name.isBlank()) { throw new IllegalArgumentException("Insert a valid name"); }
+        _name=name;
     }
 
     // Mudar o diretor do Departamento
@@ -33,26 +39,21 @@ public class Department {
 
 
     // Adicionar empregado ao Departamento
-    public void addEmployee (Employee employee){
-        if (employee!=null && employee.isInDepartment(this)){
-        employeeList.add(employee);}
+    public boolean addEmployee (Employee employee){
+        if (employee!=null ){
+        employeeList.add(employee);
+        return true;}
+        return false;
     }
 
     // Remover empregado do Departamento
-    public void removeEmployee (Employee employee){
+    public boolean removeEmployee (Employee employee){
+        if (employee.isInDepartment(this)){
         employeeList.remove(employee);
+        return true;}
+        return false;
     }
 
-    // Visualizar detalhes do departamento
-    @Override
-    public String toString() {
-        return "Department{" +
-                "_name='" + _name + '\'' +
-                ", _director=" + _director +
-                ", _organization=" + _organization +
-                ", employeeList=" + employeeList +
-                '}';
-    }
 
 }
 

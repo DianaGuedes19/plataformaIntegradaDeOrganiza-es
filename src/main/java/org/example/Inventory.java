@@ -8,16 +8,25 @@ public class Inventory {
     private int _quantity;
     private String _location;
 
-    private List <Inventory> _listaDeItens;
+
 
     private Organization _organization;
 
     public Inventory (String itemName, int quantity, String location, Organization organization){
+        if (itemName == null || itemName.isBlank()){throw new IllegalArgumentException("Insert a valid Itemname");}
         _itemName=itemName;
+
+        if (quantity <0 ){throw new IllegalArgumentException("Insert a valid quantity");}
         _quantity=quantity;
+
+        if (location == null || location.isBlank()){throw new IllegalArgumentException("Insert a valid location");}
         _location=location;
+
+        if (organization == null ){throw new IllegalArgumentException("Insert a valid organization");}
         _organization=organization;
     }
+
+    protected List <Inventory> _listaDeItens;
 
     // Adicionar itens à lista
     public void adicionarItem (Inventory inventory){
@@ -41,13 +50,4 @@ public class Inventory {
         return false;
     }
 
-    //Mostrar itens armazenados com quantidade e localização
-    @Override
-    public String toString() {
-        return "Inventory{" +
-                "_itemName='" + _itemName + '\'' +
-                ", _quantity=" + _quantity +
-                ", _location='" + _location + '\'' +
-                '}';
-    }
 }

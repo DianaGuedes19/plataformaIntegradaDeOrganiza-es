@@ -34,11 +34,4 @@ public class Task {
     _status = Newstatus;
     }
 
-    // Listar Tarefas e Projeto
-    @Override
-    public String toString() {
-        return "Task{" +
-                "_project=" + _project +
-                '}';
-    }
 }

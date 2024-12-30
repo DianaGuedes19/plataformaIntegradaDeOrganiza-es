@@ -50,11 +50,4 @@ public class Project {
         return true;
     }
 
-    // Listar todos os projetos e tarefas
-    @Override
-    public String toString() {
-        return "Project{" +
-                "tasklist=" + tasklist +
-                '}';
-    }
 }
