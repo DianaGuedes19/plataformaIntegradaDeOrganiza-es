@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Project {
@@ -11,7 +12,7 @@ public class Project {
 
     private Organization _organization;
 
-    private List <Task> tasklist;
+    protected List <Task> tasklist = new ArrayList<>();
 
     public Project(String name, String description, double budget, String status, Organization organization){
         if (name == null || name.isBlank()){throw new IllegalArgumentException("Insert a valid name");}
@@ -31,10 +32,11 @@ public class Project {
     }
 
     //Adicionar tarefas ao projeto
-    public void addTaskToProject(Task task){
+    public boolean addTaskToProject(Task task){
        if (task!=null){
-        tasklist.add(task);}
-       else { throw new IllegalArgumentException("Task cannot be null"); }
+        tasklist.add(task);
+       return true;}
+       return false;
     }
     //Remover tarefas do projeto
     public void removeTaskFromProject(Task task){
@@ -49,5 +51,7 @@ public class Project {
         _status=status;
         return true;
     }
+
+
 
 }

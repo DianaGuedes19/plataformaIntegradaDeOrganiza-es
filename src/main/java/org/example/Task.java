@@ -34,4 +34,7 @@ public class Task {
     _status = Newstatus;
     }
 
+    protected String get_status() {
+        return _status;
+    }
 }
