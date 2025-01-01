@@ -129,8 +129,6 @@ public class ProjectTest {
         //arrange
         Organization organization1 = new Organization("ISEP");
         Project project1 = new Project("DevSoft","Sprint",3000,"Em progresso",organization1);
-        Employee employee1 = new Employee("João", "Professor",500.50);
-        Task task1 = new Task("Switch","Em progresso", project1, employee1);
 
         // act
         Boolean result = project1.addTaskToProject(null);

@@ -86,8 +86,6 @@ public class TaskTest {
     public void DontCreateTaskObjectDueToNullProject() throws Exception {
 
         //arrange
-        Organization organization1 = new Organization("ISEP");
-        Project project1= new Project("DevSoft","Sprint",3000,"Em progresso",organization1);
         Employee employee1 = new Employee("João", "Professor",500.50);
 
 
@@ -103,7 +101,6 @@ public class TaskTest {
         //arrange
         Organization organization1 = new Organization("ISEP");
         Project project1= new Project("DevSoft","Sprint",3000,"Em progresso",organization1);
-        Employee employee1 = new Employee("João", "Professor",500.50);
 
 
         //act + assert

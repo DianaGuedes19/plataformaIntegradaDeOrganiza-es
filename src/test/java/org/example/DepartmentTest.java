@@ -47,7 +47,6 @@ public class DepartmentTest {
 
         //arrange
         //act + assert
-        Employee employee1 = new Employee("João", "Professor",500.50);
         Organization organization1 = new Organization("ISEP");
 
         assertThrows(Exception.class, () -> new Department("Diana", null, organization1));
@@ -58,7 +57,6 @@ public class DepartmentTest {
 
         //arrange
         //act + assert
-        Employee employee1 = new Employee("João", "Professor",500.50);
         Organization organization1 = new Organization("ISEP");
 
         assertThrows(Exception.class, () -> new Department("Switch", null, organization1));

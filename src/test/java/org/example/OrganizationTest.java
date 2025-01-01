@@ -36,8 +36,6 @@ public class OrganizationTest {
     public void nullDontAddDepartment () throws Exception{
         //arrange
         Organization organization1 = new Organization("ISEP");
-        Employee employee1 = new Employee("João", "Professor",500.50);
-        Department department1 = new Department("Switch", employee1,organization1);
         organization1.ListOfDepartments = new ArrayList<>();
 
         // act
