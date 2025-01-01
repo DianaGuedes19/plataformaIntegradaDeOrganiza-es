@@ -1,33 +1,37 @@
-#Funcionalidades
+This project is focused on creating a small organization system for a factory, with inventory, employees and even tasks.
+This project aims to solidify all the bases about objects in Java.
 
-1. Gestão de Organização
-Criar Organização: Permitir a criação de uma nova organização.
-Adicionar Departamentos: Associar departamentos a uma organização.
 
-2. Gestão de Departamentos
-Adicionar Departamentos: Criar novos departamentos com um diretor e uma lista de colaboradores.
-Alterar Diretor do Departamento: Atualizar o diretor responsável por um departamento.
-Adicionar/Remover Colaboradores: Gerir a lista de colaboradores do departamento.
+Some of the features of this project:
+#Features
 
-3. Gestão de Colaboradores (Funcionários)
-Adicionar Funcionário: Registar novos funcionários, incluindo nome, posição e salário.
-Associar Funcionário a um Departamento: Garantir que cada funcionário pertence a um departamento.
-Atualizar Informações do Funcionário: Editar posição, salário ou outro dado do funcionário.
-Atribuir Tarefas: Associar tarefas a funcionários específicos.
+1. Organization Management
+   Create Organization: Allow the creation of a new organization.
+   Adding Departments: Associate departments with an organization.
 
-4. Gestão de Projetos
-Criar Projeto: Registar novos projetos com nome, descrição, orçamento e um gestor responsável.
-Adicionar Tarefas ao Projeto: Criar tarefas e associá-las a um projeto.
-Atualizar Status do Projeto: Modificar o estado do projeto (Em andamento, Concluído, Cancelado).
-Visualizar Projetos: Listar todos os projetos com suas tarefas.
+2. Department Management
+   Add Departments: Create new departments with a director and a list of employees.
+   Change Department Director: Update the director responsible for a department.
+   Add/Remove Employees: Manage the department's employee list.
 
-5. Gestão de Tarefas
-Criar Tarefa: Definir tarefas com nome, estado (Pendente, Em Progresso, Concluído) e atribuí-las a um funcionário e projeto.
-Atualizar Status da Tarefa: Permitir a mudança de estado de uma tarefa (ex.: de Pendente para Em Progresso).
-Reatribuir Tarefas: Mudar o responsável de uma tarefa, caso necessário.
+3. Employee Management (Employees)
+   Add Employee: Register new employees, including name, position and salary.
+   Associate Employee with a Department: Ensure that each employee belongs to a department.
+   Update Employee Information: Edit job title, salary or other employee information.
+   Assign Tasks: Associate tasks with specific employees.
 
-6. Gestão de Inventário
-Adicionar Itens ao Inventário: Registar novos itens com nome, quantidade e localização.
-Atualizar Quantidade de um Item: Aumentar ou reduzir a quantidade de um item.
-Remover Itens: Eliminar itens que não estão mais disponíveis.
+4. Project Management
+   Create Project: Register new projects with name, description, budget and a responsible manager.
+   Add Tasks to Project: Create tasks and link them to a project.
+   Update Project Status: Modify the project status (In Progress, Completed, Canceled).
+   View Projects: List all projects with their tasks.
 
+5. Task Management
+   Create Task: Define tasks with name, status (Pending, In Progress, Completed) and assign them to an employee and project.
+   Update Task Status: Allow changing the status of a task (e.g., from Pending to In Progress).
+   Reassign Tasks: Change who is responsible for a task if necessary.
+
+6. Inventory Management
+   Adding Items to Inventory: Register new items with name, quantity and location.
+   Update Quantity of an Item: Increase or reduce the quantity of an item.
+   Remove Items: Delete items that are no longer available.
